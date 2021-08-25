@@ -8,7 +8,7 @@
 /* Header */
 .header {
     background-color: #f8f8f8;
-    box-shadow: 3px 3px 3px #000;
+    border-bottom: 2px solid #000;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -18,7 +18,10 @@
 .header__upper {
     background-color: chocolate;
     color: #fff;
-    height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    height: 30px;
     width: 100%;
 }
 
@@ -41,7 +44,8 @@
 
 .nav {
     display: flex;
-    width: 60%;
+    margin-top: 20px;
+    width: 80%;
 }
 
 .nav__nav {
@@ -64,13 +68,47 @@
     font-weight: bold;
 }
 
-.nav__link::before {
+.nav__link::after {
     content: '';
     width: 0;
     height: 2px;
     background-color: transparent;
+    display: flex;
+    margin: 0 20px;
 }
 
-.nav__link:hover::before {
-    
+.nav__link:hover::after {
+    content: '';
+    display: flex;
+    width: 100%;
+    background-color: chocolate;
+    transition: ease .5s;
+    margin: 0 20px
+}
+
+/* Hero */ 
+.hero {
+    background-image: url('../images/Hero-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+}
+
+/* video */
+.video {
+    text-align: center;
+    margin: -100px 0 20px 0;
+    width: 100%;
+}
+
+/* footer */
+.footer {
+    background: #000;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
